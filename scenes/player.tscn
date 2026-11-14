@@ -11,7 +11,7 @@ properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/replication_mode = 1
 
-[node name="Player" type="CharacterBody2D" unique_id=2046756467]
+[node name="Player" type="CharacterBody2D" unique_id=2046756467 groups=["player"]]
 script = ExtResource("1_player")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=964137569]
