@@ -1,15 +1,17 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://du16oja1os1gp"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_menu"]
+[ext_resource type="Script" uid="uid://d1av3vwq4tf2u" path="res://scripts/main_menu.gd" id="1_menu"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=735006890]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_menu")
 
-[node name="CenterBox" type="VBoxContainer" parent="."]
+[node name="CenterBox" type="VBoxContainer" parent="." unique_id=1307490383]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -20,43 +22,45 @@ offset_left = -160.0
 offset_top = -90.0
 offset_right = 160.0
 offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 10
 
-[node name="TitleLabel" type="Label" parent="CenterBox"]
+[node name="TitleLabel" type="Label" parent="CenterBox" unique_id=293099837]
 layout_mode = 2
 text = "A Space Tale"
 horizontal_alignment = 1
 
-[node name="ModeSelectBox" type="VBoxContainer" parent="CenterBox"]
+[node name="ModeSelectBox" type="VBoxContainer" parent="CenterBox" unique_id=90614019]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="LocalButton" type="Button" parent="CenterBox/ModeSelectBox"]
+[node name="LocalButton" type="Button" parent="CenterBox/ModeSelectBox" unique_id=1019589425]
 layout_mode = 2
 text = "Jugar Local (Pruebas)"
 
-[node name="OnlineMenuButton" type="Button" parent="CenterBox/ModeSelectBox"]
+[node name="OnlineMenuButton" type="Button" parent="CenterBox/ModeSelectBox" unique_id=1889360165]
 layout_mode = 2
 text = "Multijugador Online"
 
-[node name="OnlineBox" type="VBoxContainer" parent="CenterBox"]
+[node name="OnlineBox" type="VBoxContainer" parent="CenterBox" unique_id=6602185]
 visible = false
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="IPInput" type="LineEdit" parent="CenterBox/OnlineBox"]
+[node name="IPInput" type="LineEdit" parent="CenterBox/OnlineBox" unique_id=873625772]
 layout_mode = 2
 text = "100.106.142.83"
 placeholder_text = "IP Tailscale (100.x.y.z)"
 
-[node name="ConnectButton" type="Button" parent="CenterBox/OnlineBox"]
+[node name="ConnectButton" type="Button" parent="CenterBox/OnlineBox" unique_id=25449955]
 layout_mode = 2
 text = "Conectar"
 
-[node name="BackButton" type="Button" parent="CenterBox/OnlineBox"]
+[node name="BackButton" type="Button" parent="CenterBox/OnlineBox" unique_id=894949744]
 layout_mode = 2
 text = "Volver"
 
-[node name="StatusLabel" type="Label" parent="CenterBox/OnlineBox"]
+[node name="StatusLabel" type="Label" parent="CenterBox/OnlineBox" unique_id=1263279132]
 layout_mode = 2
 horizontal_alignment = 1

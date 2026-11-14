@@ -10,11 +10,14 @@ config_version=5
 
 [application]
 
-run/main_scene="res://scenes/main_menu.tscn"
-
 config/name="A Space Tale V1"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Network="*res://scripts/network.gd"
 
 [display]
 
@@ -50,8 +53,5 @@ Derecha={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
-
-[autoload]
-
-Network="*res://scripts/network.gd"
