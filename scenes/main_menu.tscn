@@ -1,62 +1,120 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://23lkk7x2np7v"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_menu"]
+[ext_resource type="Script" uid="uid://d1av3vwq4tf2u" path="res://scripts/main_menu.gd" id="1_menu"]
+[ext_resource type="Texture2D" uid="uid://bgeiqo8tsiafi" path="res://menu_inicio_AST.png" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://ct15esxd6n6ab" path="res://logo_AST.png" id="3_bqqt6"]
 
-[node name="MainMenu" type="Control"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i27xq"]
+texture = ExtResource("2_ekxnf")
+modulate_color = Color(0.36810192, 0.36810198, 0.36810192, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a4b6b"]
+bg_color = Color(1, 1, 0.6, 1)
+border_color = Color(1, 1, 0.6, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.49411765)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg41q"]
+bg_color = Color(1, 1, 0.79607844, 1)
+border_color = Color(1, 1, 0.6, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_unk5u"]
+bg_color = Color(1, 1, 0.6, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="MainMenu" type="Control" unique_id=1009762733]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_menu")
 
-[node name="CenterBox" type="VBoxContainer" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=2046181269]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_i27xq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=948099042]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -160.0
-offset_top = -90.0
-offset_right = 160.0
-offset_bottom = 90.0
-theme_override_constants/separation = 10
-
-[node name="TitleLabel" type="Label" parent="CenterBox"]
-layout_mode = 2
-text = "A Space Tale"
-horizontal_alignment = 1
-
-[node name="ModeSelectBox" type="VBoxContainer" parent="CenterBox"]
-layout_mode = 2
+offset_left = -215.125
+offset_top = -23.934998
+offset_right = 215.1242
+offset_bottom = 215.0625
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 8
 
-[node name="LocalButton" type="Button" parent="CenterBox/ModeSelectBox"]
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=86340425]
 layout_mode = 2
-text = "Jugar Local (Pruebas)"
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a4b6b")
+text = "Start"
 
-[node name="OnlineMenuButton" type="Button" parent="CenterBox/ModeSelectBox"]
+[node name="OptionButton" type="Button" parent="VBoxContainer" unique_id=483727368]
 layout_mode = 2
-text = "Multijugador Online"
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a4b6b")
+text = "Options"
 
-[node name="OnlineBox" type="VBoxContainer" parent="CenterBox"]
-visible = false
+[node name="IPInput" type="LineEdit" parent="VBoxContainer" unique_id=1983742750]
 layout_mode = 2
-theme_override_constants/separation = 8
-
-[node name="IPInput" type="LineEdit" parent="CenterBox/OnlineBox"]
-layout_mode = 2
-text = "100.106.142.83"
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_bg41q")
+text = "127.0.0.1"
 placeholder_text = "IP Tailscale (100.x.y.z)"
+alignment = 1
 
-[node name="ConnectButton" type="Button" parent="CenterBox/OnlineBox"]
+[node name="ConnectButton" type="Button" parent="VBoxContainer" unique_id=732607107]
 layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_unk5u")
 text = "Conectar"
 
-[node name="BackButton" type="Button" parent="CenterBox/OnlineBox"]
+[node name="StatusLabel" type="Label" parent="VBoxContainer" unique_id=1257768736]
 layout_mode = 2
-text = "Volver"
-
-[node name="StatusLabel" type="Label" parent="CenterBox/OnlineBox"]
-layout_mode = 2
+size_flags_vertical = 3
 horizontal_alignment = 1
+
+[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=2005702400]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a4b6b")
+text = "Exit"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1080049341]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -119.0
+offset_top = 49.895
+offset_right = 119.0
+offset_bottom = 271.8949
+grow_horizontal = 2
+texture = ExtResource("3_bqqt6")
