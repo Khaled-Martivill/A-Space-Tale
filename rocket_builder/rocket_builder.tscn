@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://bkylqpar0js5h"]
+
+[ext_resource type="Script" uid="uid://cec4p7ilic7fw" path="res://rocket_builder/rocket_builder.gd" id="1_5tkpf"]
+[ext_resource type="Texture2D" uid="uid://bguvbeqwpavcb" path="res://menu.png" id="2_7qg6h"]
+[ext_resource type="Texture2D" uid="uid://qxq236f7o46" path="res://rocket_builder/fondoEtapa1.png" id="3_pjgqb"]
+[ext_resource type="SpriteFrames" uid="uid://cvd44uttixmbt" path="res://rocket_builder/shuttle_base.tres" id="4_pjgqb"]
+
+[node name="RocketBuilder" type="Control" unique_id=627536036]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5tkpf")
+
+[node name="MainLayout" type="HBoxContainer" parent="." unique_id=221301591]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="UIPanel" type="TextureRect" parent="MainLayout" unique_id=118013683]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+texture = ExtResource("2_7qg6h")
+expand_mode = 1
+
+[node name="ItemPreview" type="TextureRect" parent="MainLayout/UIPanel" unique_id=27407870]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.020000001
+anchor_top = 0.025
+anchor_right = 0.40100002
+anchor_bottom = 0.307
+offset_left = -0.3600006
+offset_top = -0.20000076
+offset_right = 0.031982422
+offset_bottom = 0.06399536
+
+[node name="MoneyLabel" type="Label" parent="MainLayout/UIPanel" unique_id=1701806606]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.022000002
+anchor_top = 0.316
+anchor_right = 0.402
+anchor_bottom = 0.363
+offset_left = 0.103998184
+offset_top = 0.23199463
+offset_right = 0.26397705
+offset_bottom = -0.22399902
+
+[node name="InfoLabel" type="Label" parent="MainLayout/UIPanel" unique_id=1417565195]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021000002
+anchor_top = 0.36900002
+anchor_right = 0.44
+anchor_bottom = 0.97
+offset_left = -0.12800217
+offset_top = -0.11201477
+offset_right = 0.041748047
+offset_bottom = -0.08001709
+autowrap_mode = 2
+
+[node name="TabStoreBtn" type="Button" parent="MainLayout/UIPanel" unique_id=1116587476]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47000003
+anchor_top = 0.037
+anchor_right = 0.609
+anchor_bottom = 0.11400001
+offset_left = 0.039978027
+offset_top = 0.024000168
+offset_right = 0.28796387
+offset_bottom = 0.12799835
+
+[node name="TabStatsBtn" type="Button" parent="MainLayout/UIPanel" unique_id=603048830]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.638
+anchor_top = 0.035
+anchor_right = 0.777
+anchor_bottom = 0.11400001
+offset_left = 0.015991211
+offset_top = 0.3199997
+offset_right = 0.26397705
+offset_bottom = 0.12799835
+
+[node name="LaunchBtn" type="Button" parent="MainLayout/UIPanel" unique_id=921359220]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.81200004
+anchor_top = 0.037
+anchor_right = 0.961
+anchor_bottom = 0.11400001
+offset_left = 0.38397217
+offset_top = 0.024000168
+offset_right = 0.28527832
+offset_bottom = 0.12799835
+
+[node name="PartsScroll" type="ScrollContainer" parent="MainLayout/UIPanel" unique_id=962885010]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45100003
+anchor_top = 0.14500001
+anchor_right = 0.96500003
+anchor_bottom = 0.975
+offset_left = -0.368042
+offset_top = 0.039993286
+offset_right = -0.11999512
+
+[node name="PartsList" type="VBoxContainer" parent="MainLayout/UIPanel/PartsScroll" unique_id=87115105]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="HangarArea" type="Control" parent="MainLayout" unique_id=1526763592]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="MainLayout/HangarArea" unique_id=1367321975]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_pjgqb")
+expand_mode = 1
+
+[node name="ShuttleAnim" type="AnimatedSprite2D" parent="MainLayout/HangarArea" unique_id=16974318]
+position = Vector2(191.75, 326.125)
+scale = Vector2(3.75, 3.5652776)
+sprite_frames = ExtResource("4_pjgqb")
+animation = &"idle"
+frame_progress = 0.97343963

@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cvd44uttixmbt"]
+
+[ext_resource type="Texture2D" uid="uid://bklfejhh1j0q5" path="res://rocket_builder/despeguesprite.png" id="1_7mx8q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6sx2"]
+atlas = ExtResource("1_7mx8q")
+region = Rect2(0, 0, 102, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkwah"]
+atlas = ExtResource("1_7mx8q")
+region = Rect2(102, 0, 102, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbng0"]
+atlas = ExtResource("1_7mx8q")
+region = Rect2(204, 0, 102, 180)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6sx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkwah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbng0")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
