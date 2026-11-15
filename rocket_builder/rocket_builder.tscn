@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bkylqpar0js5h"]
 
 [ext_resource type="Script" uid="uid://cec4p7ilic7fw" path="res://rocket_builder/rocket_builder.gd" id="1_5tkpf"]
-[ext_resource type="Texture2D" uid="uid://bguvbeqwpavcb" path="res://menu.png" id="2_7qg6h"]
+[ext_resource type="Texture2D" uid="uid://h3nnknvm3st5" path="res://rocket_builder/etapa1Menu.png" id="2_pjgqb"]
 [ext_resource type="Texture2D" uid="uid://qxq236f7o46" path="res://rocket_builder/fondoEtapa1.png" id="3_pjgqb"]
 [ext_resource type="SpriteFrames" uid="uid://cvd44uttixmbt" path="res://rocket_builder/shuttle_base.tres" id="4_pjgqb"]
 
@@ -27,7 +27,7 @@ theme_override_constants/separation = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-texture = ExtResource("2_7qg6h")
+texture = ExtResource("2_pjgqb")
 expand_mode = 1
 
 [node name="ItemPreview" type="TextureRect" parent="MainLayout/UIPanel" unique_id=27407870]

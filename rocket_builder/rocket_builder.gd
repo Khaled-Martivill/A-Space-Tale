@@ -20,7 +20,7 @@ const PARTS_DATA := {
 				"isp": 0.0,
 				"drag_factor": 0.80,
 				"desc": "Mucha resistencia del aire; frena el ascenso.",
-				"icon": preload("res://icon.svg"),
+				"icon": preload("res://scenes/nariz.png"),
 				"frames": preload("res://rocket_builder/shuttle_base.tres")
 			},
 			"nose_2": {
@@ -32,7 +32,7 @@ const PARTS_DATA := {
 				"isp": 0.0,
 				"drag_factor": 0.90,
 				"desc": "Equilibrio entre peso y penetración atmosférica.",
-				"icon": preload("res://icon.svg"),
+				"icon": preload("res://scenes/nariz.png"),
 				"frames": preload("res://rocket_builder/shuttle_base.tres")
 			},
 			"nose_3": {
@@ -44,7 +44,7 @@ const PARTS_DATA := {
 				"isp": 0.0,
 				"drag_factor": 0.98,
 				"desc": "Muy ligera y aerodinámica; minimiza pérdidas.",
-				"icon": preload("res://icon.svg"),
+				"icon": preload("res://scenes/nariz.png"),
 				"frames": preload("res://rocket_builder/shuttle_base.tres")
 			}
 		}
@@ -61,7 +61,7 @@ const PARTS_DATA := {
 				"isp": 0.0,
 				"drag_factor": 0.0,
 				"desc": "Barata y resistente, pero añade demasiada masa muerta.",
-				"icon": preload("res://icon.svg"),
+				"icon": preload("res://cuerpo.png"),
 				"frames": preload("res://rocket_builder/shuttle_base.tres")
 			},
 			"cabin_2": {
@@ -73,7 +73,7 @@ const PARTS_DATA := {
 				"isp": 0.0,
 				"drag_factor": 0.0,
 				"desc": "Peso estándar de misión orbital.",
-				"icon": preload("res://icon.svg"),
+				"icon": preload("res://cuerpo.png"),
 				"frames": preload("res://rocket_builder/shuttle_base.tres")
 			},
 			"cabin_3": {
@@ -85,7 +85,7 @@ const PARTS_DATA := {
 				"isp": 0.0,
 				"drag_factor": 0.0,
 				"desc": "Maximiza la relación de masa (m_total / m_seca) de Tsiolkovski.",
-				"icon": preload("res://icon.svg"),
+				"icon": preload("res://cuerpo.png"),
 				"frames": preload("res://rocket_builder/shuttle_base.tres")
 			}
 		}
@@ -102,7 +102,7 @@ const PARTS_DATA := {
 				"isp": 0.0,
 				"drag_factor": 0.0,
 				"desc": "Poco combustible; solo sirve para vuelos suborbitales.",
-				"icon": preload("res://icon.svg"),
+				"icon": preload("res://scenes/tanque.png"),
 				"frames": preload("res://rocket_builder/shuttle_base.tres")
 			},
 			"tank_2": {
@@ -114,7 +114,7 @@ const PARTS_DATA := {
 				"isp": 0.0,
 				"drag_factor": 0.0,
 				"desc": "Capacidad media; requiere buen motor para despegar.",
-				"icon": preload("res://icon.svg"),
+				"icon": preload("res://scenes/tanque.png"),
 				"frames": preload("res://rocket_builder/shuttle_base.tres")
 			},
 			"tank_3": {
@@ -126,7 +126,7 @@ const PARTS_DATA := {
 				"isp": 0.0,
 				"drag_factor": 0.0,
 				"desc": "Enorme reserva de propelente; exige mucho empuje.",
-				"icon": preload("res://icon.svg"),
+				"icon": preload("res://scenes/tanque.png"),
 				"frames": preload("res://rocket_builder/shuttle_base.tres")
 			}
 		}
@@ -143,7 +143,7 @@ const PARTS_DATA := {
 				"isp": 280.0,
 				"drag_factor": 0.0,
 				"desc": "Empuje y eficiencia bajos; solo levanta cohetes ligeros.",
-				"icon": preload("res://icon.svg"),
+				"icon": preload("res://scenes/thruster.png"),
 				"frames": preload("res://rocket_builder/shuttle_base.tres")
 			},
 			"engine_2": {
@@ -155,7 +155,7 @@ const PARTS_DATA := {
 				"isp": 330.0,
 				"drag_factor": 0.0,
 				"desc": "Buen empuje para levantar el tanque mediano.",
-				"icon": preload("res://icon.svg"),
+				"icon": preload("res://scenes/thruster.png"),
 				"frames": preload("res://rocket_builder/shuttle_base.tres")
 			},
 			"engine_3": {
@@ -167,7 +167,7 @@ const PARTS_DATA := {
 				"isp": 385.0,
 				"drag_factor": 0.0,
 				"desc": "Alto Isp y empuje brutal para cargar el tanque XL.",
-				"icon": preload("res://icon.svg"),
+				"icon": preload("res://scenes/thruster.png"),
 				"frames": preload("res://rocket_builder/shuttle_base.tres")
 			}
 		}

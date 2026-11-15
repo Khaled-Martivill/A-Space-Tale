@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvnykvxcx57de"
-path="res://.godot/imported/fondo_etapa1.png-d5098bfe609a7aefb7b8720478bcb974.ctex"
+uid="uid://p141o6waq476"
+path="res://.godot/imported/cuerpo.png-496cf1c5333bc83765acbd08340c4b16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/pruebas/fondo_etapa1.png"
-dest_files=["res://.godot/imported/fondo_etapa1.png-d5098bfe609a7aefb7b8720478bcb974.ctex"]
+source_file="res://cuerpo.png"
+dest_files=["res://.godot/imported/cuerpo.png-496cf1c5333bc83765acbd08340c4b16.ctex"]
 
 [params]
 
