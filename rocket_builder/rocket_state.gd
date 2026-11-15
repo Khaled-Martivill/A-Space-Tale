@@ -1,6 +1,6 @@
 extends Node
 
-var money: int = 2000
+var money: int = 200000
 var current_shuttle_frames: SpriteFrames = load("res://rocket_builder/shuttle_base.tres")
 
 # Guarda qué opción está equipada en cada ranura (vacío al inicio)
@@ -38,3 +38,6 @@ func recalculate_build_data() -> void:
 		build_data["thrust"] += part.get("thrust", 0.0)
 		build_data["isp"] += part.get("isp", 0.0)
 		build_data["drag_factor"] += part.get("drag_factor", 0.0)
+		
+var launch_success: bool = false
+var launch_report: String = ""

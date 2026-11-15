@@ -330,5 +330,53 @@ func _show_equipped_summary() -> void:
 func _update_money_ui() -> void:
 	money_label.text = "$ " + str(RocketState.money)
 
+var is_launching: bool = false
+
 func _on_launch_pressed() -> void:
-	print("Datos listos para tus ecuaciones: ", RocketState.equipped_parts)
+	if is_launching:
+		return
+		
+	# 1. Validación mínima: el cohete necesita al menos tanque y motor para intentar despegar
+	if RocketState.equipped_parts["tank"].is_empty() or RocketState.equipped_parts["engine"].is_empty():
+		info_label.text = "Faltan componentes críticos: equipa al menos un Tanque y un Propulsor."
+		return
+		
+	# 2. Pedir al servidor (Host) que valide, calcule y cambie de escena para todos
+	request_launch.rpc_id(1)
+
+@rpc("any_peer", "call_local", "reliable")
+func request_launch() -> void:
+	if not multiplayer.is_server() or is_launching:
+		return
+		
+	# Aseguramos que build_data esté al día con las 4 ranuras
+	RocketState.recalculate_build_data()
+	
+	# =========================================================================
+	# AQUÍ VAN TUS ECUACIONES REALES (consumiendo RocketState.build_data)
+	# Variables disponibles:
+	#   RocketState.build_data["dry_mass"]    (kg)
+	#   RocketState.build_data["fuel_mass"]   (kg)
+	#   RocketState.build_data["thrust"]      (N)
+	#   RocketState.build_data["isp"]         (s)
+	#   RocketState.build_data["drag_factor"] (0.80 - 0.98)
+	# =========================================================================
+	var success: bool = true
+	var report: String = "Telemetría nominal. Órbita alcanzada."
+	
+	# Ejemplo temporal mientras metes tus fórmulas:
+	if RocketState.build_data["thrust"] <= 0:
+		success = false
+		report = "Sin empuje."
+	# =========================================================================
+	
+	go_to_launch_scene.rpc(success, report)
+
+@rpc("authority", "call_local", "reliable")
+func go_to_launch_scene(success: bool, report: String) -> void:
+	is_launching = true
+	RocketState.launch_success = success
+	RocketState.launch_report = report
+	
+	# Cambia la ruta si guardaste tu escena de lanzamiento con otro nombre o carpeta
+	get_tree().change_scene_to_file("res://scenes/launch_scene.tscn")
