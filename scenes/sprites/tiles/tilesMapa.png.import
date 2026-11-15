@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<<< HEAD:scenes/sprites/tiles/tilesMapa.png.import
 uid="uid://dl7ms1sjsuce5"
 path="res://.godot/imported/tilesMapa.png-64191df247e601e0c100aa0635541035.ctex"
+========
+uid="uid://p141o6waq476"
+path="res://.godot/imported/cuerpo.png-496cf1c5333bc83765acbd08340c4b16.ctex"
+>>>>>>>> origin/feature/main-menu:cuerpo.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:scenes/sprites/tiles/tilesMapa.png.import
 source_file="res://scenes/sprites/tiles/tilesMapa.png"
 dest_files=["res://.godot/imported/tilesMapa.png-64191df247e601e0c100aa0635541035.ctex"]
+========
+source_file="res://cuerpo.png"
+dest_files=["res://.godot/imported/cuerpo.png-496cf1c5333bc83765acbd08340c4b16.ctex"]
+>>>>>>>> origin/feature/main-menu:cuerpo.png.import
 
 [params]
 
