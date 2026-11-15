@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://42e30v2n68p8"]
 
-[ext_resource type="Texture2D" uid="uid://cgod1lvmyag5m" path="res://icon.svg" id="1_qf515"]
 [ext_resource type="Script" uid="uid://3i6tckydmpks" path="res://scripts/minigame_status.gd" id="1_rwok8"]
 [ext_resource type="PackedScene" uid="uid://w1a4eupp6yet" path="res://scenes/minigames/bionutrients/BioNutrients_minigame.tscn" id="2_7c50g"]
 [ext_resource type="PackedScene" uid="uid://duiap5mr5oag" path="res://interaccion/InteractionArea.tscn" id="3_a1tvp"]
@@ -8,9 +7,5 @@
 [node name="Objeto" type="Node2D" unique_id=1552841659]
 script = ExtResource("1_rwok8")
 minigame_scene = ExtResource("2_7c50g")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=212946950]
-scale = Vector2(0.125, 0.125)
-texture = ExtResource("1_qf515")
 
 [node name="InteractionArea" parent="." unique_id=1100873185 instance=ExtResource("3_a1tvp")]

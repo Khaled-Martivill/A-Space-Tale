@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cd2h71pc2khrq"]
+
+[ext_resource type="Script" uid="uid://3i6tckydmpks" path="res://scripts/minigame_status.gd" id="1_5k3oi"]
+[ext_resource type="PackedScene" uid="uid://dot8akwcbchhl" path="res://scenes/minigames/rover/rover_minigame.tscn" id="2_gjgr1"]
+[ext_resource type="PackedScene" uid="uid://duiap5mr5oag" path="res://interaccion/InteractionArea.tscn" id="4_whrtw"]
+
+[node name="Objeto" type="Node2D" unique_id=1552841659]
+script = ExtResource("1_5k3oi")
+minigame_scene = ExtResource("2_gjgr1")
+
+[node name="InteractionArea" parent="." unique_id=1100873185 instance=ExtResource("4_whrtw")]

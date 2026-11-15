@@ -26,13 +26,6 @@ func _ready() -> void:
 
 func _update_visual() -> void:
 	interaction_area.enabled = (status == Status.FREE)
-	match status:
-		Status.FREE:
-			$Sprite2D.modulate = Color.YELLOW
-		Status.BUSY:
-			$Sprite2D.modulate = Color.WHITE
-		Status.COMPLETED:
-			$Sprite2D.modulate = Color.GRAY
 
 # ---------- Lado del jugador que interactúa ----------
 func _on_interact() -> void:
