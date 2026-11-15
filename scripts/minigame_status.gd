@@ -7,6 +7,7 @@ enum Status { FREE, BUSY, COMPLETED }
 @onready var interaction_area: InteractionArea = $InteractionArea
 
 signal start_response(allowed: bool)
+signal station_completed
 
 # Esta variable se sincroniza con el MultiplayerSynchronizer
 var status: Status = Status.FREE:
@@ -77,6 +78,8 @@ func request_end(win: bool) -> void:
 		return
 	occupant = 0
 	status = Status.COMPLETED if win else Status.FREE
+	if win:
+		station_completed.emit()
 
 func _on_peer_disconnected(id: int) -> void:
 	if status == Status.BUSY and id == occupant:
