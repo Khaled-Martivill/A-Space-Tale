@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var label = $Label
 
-const BASE_TEXT = "[C] to "
+const BASE_TEXT = "[C] to interact"
 const OFFSET = Vector2(0,-30)
 
 var player: Node2D

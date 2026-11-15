@@ -1,10 +1,10 @@
 extends Control
 
-@onready var start_btn: Button = $VBoxContainer/StartButton
+@onready var start_btn: TextureButton = $VBoxContainer/StartButton
 @onready var ip_input: LineEdit = $VBoxContainer/IPInput
-@onready var connect_btn: Button = $VBoxContainer/ConnectButton
+@onready var connect_btn: TextureButton = $VBoxContainer/ConnectButton
 @onready var status_label: Label = $VBoxContainer/StatusLabel
-@onready var exit_btn: Button = $VBoxContainer/ExitButton
+@onready var exit_btn: TextureButton = $VBoxContainer/ExitButton
 
 func _ready() -> void:
 	start_btn.pressed.connect(_on_start_pressed)

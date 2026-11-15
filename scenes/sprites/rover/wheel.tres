@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://o2gub0547yry"]
+
+[ext_resource type="Texture2D" uid="uid://bhbvc4hee2cc3" path="res://scenes/sprites/rover/roverASTMinijuego_Piezas.png" id="1_ofrod"]
+
+[resource]
+atlas = ExtResource("1_ofrod")
+region = Rect2(210, 138, 38, 37)

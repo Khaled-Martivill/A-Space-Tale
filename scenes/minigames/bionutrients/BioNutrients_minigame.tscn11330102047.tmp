@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://w1a4eupp6yet"]
+
+[ext_resource type="Script" uid="uid://cb1muuii3f6ns" path="res://scripts/bionutrients_minigame.gd" id="1_jnu76"]
+[ext_resource type="Texture2D" uid="uid://bm20d7o56nn6i" path="res://scenes/sprites/bionutrients/pantalla_bionutrintes.jpg" id="2_mwivo"]
+[ext_resource type="Script" uid="uid://c0wa5llrare3w" path="res://scripts/slot2.gd" id="3_jo1bo"]
+[ext_resource type="Texture2D" uid="uid://b0wdku1780wjk" path="res://scenes/sprites/bionutrients/pwd.tres" id="4_748wx"]
+[ext_resource type="Texture2D" uid="uid://dy6eqsrotapl" path="res://scenes/sprites/bionutrients/full_bag.tres" id="5_jlt0u"]
+[ext_resource type="Script" uid="uid://bbb0vvgb04265" path="res://scripts/pieces.gd" id="6_jiupq"]
+[ext_resource type="Texture2D" uid="uid://spys5nxxbbjo" path="res://scenes/sprites/bionutrients/production_bag.tres" id="6_mwivo"]
+[ext_resource type="Texture2D" uid="uid://cb4vsf33rhv35" path="res://scenes/sprites/bionutrients/empty_bag.tres" id="7_mkvpt"]
+[ext_resource type="Texture2D" uid="uid://b27gcrd4kjij0" path="res://scenes/sprites/bionutrients/full_syringe.tres" id="8_0lc21"]
+[ext_resource type="Texture2D" uid="uid://dt6c4k1o5e3dq" path="res://scenes/sprites/bionutrients/empty_syringe.tres" id="9_xj630"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xtp4o"]
+size = Vector2(66, 86)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ms6pq"]
+size = Vector2(34, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87thh"]
+size = Vector2(32, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68vre"]
+size = Vector2(34, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmvoq"]
+size = Vector2(16, 44)
+
+[node name="BioNutrientsMinigame" type="CanvasLayer" unique_id=979923498 node_paths=PackedStringArray("empty_bag", "full_syringe", "empty_syringe")]
+script = ExtResource("1_jnu76")
+empty_bag = NodePath("Node2D/Drag/Bag/Vacia")
+full_syringe = NodePath("Node2D/Drag/Syringe/Llena")
+empty_syringe = NodePath("Node2D/Drag/Syringe/Vacia")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=684493689]
+position = Vector2(576, 323.5)
+scale = Vector2(2.35625, 2.4722223)
+texture = ExtResource("2_mwivo")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=175474674]
+
+[node name="Function" type="Node2D" parent="Node2D" unique_id=1030420510]
+
+[node name="PWD" type="StaticBody2D" parent="Node2D/Function" unique_id=1890010024]
+position = Vector2(395, 313)
+script = ExtResource("3_jo1bo")
+id = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Function/PWD" unique_id=227950516]
+position = Vector2(1.000001, -1.9073486e-06)
+scale = Vector2(1.5714285, 1.7708334)
+texture = ExtResource("4_748wx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Function/PWD" unique_id=1794254262]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_xtp4o")
+
+[node name="Bag" type="StaticBody2D" parent="Node2D/Function" unique_id=1042280675]
+position = Vector2(472, 336)
+script = ExtResource("3_jo1bo")
+id = 2
+active = false
+visible_slot = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Function/Bag" unique_id=1378030923]
+position = Vector2(5.00679e-06, 6.198883e-06)
+scale = Vector2(1.3600004, 1.4838713)
+texture = ExtResource("5_jlt0u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Function/Bag" unique_id=2022753767]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ms6pq")
+
+[node name="ProductionBag" type="StaticBody2D" parent="Node2D/Function" unique_id=923756052]
+position = Vector2(536, 336)
+script = ExtResource("3_jo1bo")
+id = 2
+active = false
+visible_slot = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Function/ProductionBag" unique_id=378672932]
+texture = ExtResource("6_mwivo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Function/ProductionBag" unique_id=1337397024]
+shape = SubResource("RectangleShape2D_87thh")
+
+[node name="Drag" type="Node2D" parent="Node2D" unique_id=60963595]
+
+[node name="Bag" type="Node2D" parent="Node2D/Drag" unique_id=1350919570]
+position = Vector2(408, 416)
+script = ExtResource("6_jiupq")
+id = 1
+return_to_start = true
+
+[node name="Llena" type="Sprite2D" parent="Node2D/Drag/Bag" unique_id=943231993]
+visible = false
+position = Vector2(-0.1875, 0)
+scale = Vector2(1.3449993, 1.4919355)
+texture = ExtResource("5_jlt0u")
+
+[node name="Vacia" type="Sprite2D" parent="Node2D/Drag/Bag" unique_id=820078650]
+position = Vector2(5.4836273e-06, -4.7683716e-07)
+scale = Vector2(1.3299996, 1.4919355)
+texture = ExtResource("7_mkvpt")
+
+[node name="Area2D" type="Area2D" parent="Node2D/Drag/Bag" unique_id=506581857]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Drag/Bag/Area2D" unique_id=1137276011]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_68vre")
+
+[node name="Syringe" type="Node2D" parent="Node2D/Drag" unique_id=850369846]
+position = Vector2(353, 416)
+script = ExtResource("6_jiupq")
+id = 2
+return_to_start = true
+
+[node name="Llena" type="Sprite2D" parent="Node2D/Drag/Syringe" unique_id=1121061333]
+visible = false
+texture = ExtResource("8_0lc21")
+
+[node name="Vacia" type="Sprite2D" parent="Node2D/Drag/Syringe" unique_id=1849351875]
+texture = ExtResource("9_xj630")
+
+[node name="Area2D" type="Area2D" parent="Node2D/Drag/Syringe" unique_id=1700337445]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Drag/Syringe/Area2D" unique_id=875064562]
+shape = SubResource("RectangleShape2D_lmvoq")

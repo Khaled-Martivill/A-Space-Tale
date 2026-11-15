@@ -2,6 +2,7 @@ extends CharacterBody2D
 @onready var sprite: Sprite2D = $Sprite2D
 
 const SPEED := 120.0
+var can_move := true
 
 func _enter_tree() -> void:
 	if name.is_valid_int():
@@ -16,6 +17,11 @@ func _physics_process(_delta: float) -> void:
 	var dir := Input.get_vector("Izquierda", "Derecha", "Arriba", "Abajo")
 	velocity = dir * SPEED
 	
+	if not can_move:
+		velocity=Vector2.ZERO
+		move_and_slide()
+		return
+	
 	if dir != Vector2.ZERO:
 		
 
@@ -23,7 +29,7 @@ func _physics_process(_delta: float) -> void:
 		var saltito_freq := 20.0
 		var saltito_altura := 3.0
 		sprite.position.y = -abs(sin(tiempo * saltito_freq)) * saltito_altura
-		sprite.rotation = sin(tiempo * saltito_freq) * 0.15
+		sprite.rotation = sin(tiempo * saltito_freq) * 0.2
 
 		if dir.x != 0:
 			sprite.flip_h = dir.x < 0

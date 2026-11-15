@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3175xy77eajb"
-path="res://.godot/imported/Untitled.png-ef6e6560c71ef779fc6fc18e66723bde.ctex"
+uid="uid://b0vkg0tf05o8w"
+path="res://.godot/imported/roverASTMinijuegofondo_blur.png-1e03603ad755f22301afb9a69023bfb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/sprites/Untitled.png"
-dest_files=["res://.godot/imported/Untitled.png-ef6e6560c71ef779fc6fc18e66723bde.ctex"]
+source_file="res://scenes/sprites/rover/roverASTMinijuegofondo_blur.png"
+dest_files=["res://.godot/imported/roverASTMinijuegofondo_blur.png-1e03603ad755f22301afb9a69023bfb6.ctex"]
 
 [params]
 

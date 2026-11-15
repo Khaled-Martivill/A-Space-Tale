@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://b0wdku1780wjk"]
+
+[ext_resource type="Texture2D" uid="uid://b7ka54ccpjqf5" path="res://scenes/sprites/bionutrients/bionutrintes_f1.png" id="1_r310a"]
+
+[resource]
+atlas = ExtResource("1_r310a")
+region = Rect2(65, 100, 42, 48)

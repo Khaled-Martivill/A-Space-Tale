@@ -4,34 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://bgeiqo8tsiafi" path="res://menu_inicio_AST.png" id="2_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://ct15esxd6n6ab" path="res://logo_AST.png" id="3_bqqt6"]
 [ext_resource type="AudioStream" uid="uid://d3jbxvatgper4" path="res://scripts/Mars.mp3" id="3_wu84c"]
+[ext_resource type="Texture2D" uid="uid://bbrxf0qmsd38n" path="res://scenes/sprites/button/button1.tres" id="4_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://dq7v48po0h3ti" path="res://scenes/sprites/button/button1_pressed.tres" id="5_oa1go"]
+[ext_resource type="Texture2D" uid="uid://croilik56vpci" path="res://scenes/sprites/button/text.tres" id="6_oa1go"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i27xq"]
 texture = ExtResource("2_ekxnf")
 modulate_color = Color(0.36810192, 0.36810198, 0.36810192, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a4b6b"]
-bg_color = Color(1, 1, 0.6, 1)
-border_color = Color(1, 1, 0.6, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0, 0, 0, 0.49411765)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg41q"]
-bg_color = Color(1, 1, 0.79607844, 1)
-border_color = Color(1, 1, 0.6, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_unk5u"]
-bg_color = Color(1, 1, 0.6, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xt4t5"]
+texture = ExtResource("6_oa1go")
 
 [node name="MainMenu" type="Control" unique_id=1009762733]
 layout_mode = 3
@@ -72,47 +54,119 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 8
 
-[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=86340425]
+[node name="StartButton" type="TextureButton" parent="VBoxContainer" unique_id=1526074231]
+custom_minimum_size = Vector2(100, 40)
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a4b6b")
-text = "Start"
+texture_normal = ExtResource("4_rtw2f")
+texture_pressed = ExtResource("5_oa1go")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="OptionButton" type="Button" parent="VBoxContainer" unique_id=483727368]
+[node name="Label" type="Label" parent="VBoxContainer/StartButton" unique_id=1841247766]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -15.5
+offset_right = 20.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionButton" type="TextureButton" parent="VBoxContainer" unique_id=1503459604]
+custom_minimum_size = Vector2(100, 40)
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a4b6b")
+texture_normal = ExtResource("4_rtw2f")
+texture_pressed = ExtResource("5_oa1go")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/OptionButton" unique_id=276048493]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -15.5
+offset_right = 20.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="IPInput" type="LineEdit" parent="VBoxContainer" unique_id=1983742750]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_bg41q")
+theme_override_styles/normal = SubResource("StyleBoxTexture_xt4t5")
 text = "127.0.0.1"
 placeholder_text = "IP Tailscale (100.x.y.z)"
 alignment = 1
 
-[node name="ConnectButton" type="Button" parent="VBoxContainer" unique_id=732607107]
+[node name="ConnectButton" type="TextureButton" parent="VBoxContainer" unique_id=749715068]
+custom_minimum_size = Vector2(100, 40)
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_unk5u")
-text = "Conectar"
+texture_normal = ExtResource("4_rtw2f")
+texture_pressed = ExtResource("5_oa1go")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/ConnectButton" unique_id=1835488727]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -15.5
+offset_right = 20.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Connect"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="StatusLabel" type="Label" parent="VBoxContainer" unique_id=1257768736]
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_alignment = 1
 
-[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=2005702400]
+[node name="ExitButton" type="TextureButton" parent="VBoxContainer" unique_id=1910821007]
+custom_minimum_size = Vector2(100, 40)
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a4b6b")
+texture_normal = ExtResource("4_rtw2f")
+texture_pressed = ExtResource("5_oa1go")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/ExitButton" unique_id=1325464656]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -15.5
+offset_right = 20.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1080049341]
 layout_mode = 1
